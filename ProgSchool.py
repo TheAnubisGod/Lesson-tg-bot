@@ -10,5 +10,9 @@ def send_welcome(message):
 	d = d.next_hour(3)
 	if message.text == "Время":
 		bot.send_message (message.chat.id, "Время: "+str(d.format_datetime(locale='en_US')))
+	if message.text == "Кто лох?":
+		bot.send_message (message.chat.id, "Игорь - лох!")
+	else :
+		bot.send_message (message.chat.id, "Команды: Время" )
 #print (str(d))
 bot.polling( none_stop = True )
